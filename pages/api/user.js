@@ -17,6 +17,5 @@ const secret = process.env.TOKEN_SECRET
 
 export default async function(req, res) {
     const token = await jwt.getToken({ req, secret })
-    console.log('token', token)
     res.send(JSON.stringify(token, null, 2))
 }
