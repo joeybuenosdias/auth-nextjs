@@ -1,15 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
 import { useSession, signIn, signOut } from 'next-auth/client'
+import css from './header.module.css';
 
 export default function Header() {
     return (
-        <header>
-            <Link href="/">
-                <button>Home</button>
-            </Link>
-            <DashboardButton />
-            <AuthButton />
+        <header className={css.header}>
+            <Home />
+            <div className={css.subHeader}>
+                <DashboardButton />
+                <AuthButton />
+            </div>
         </header>
     )
 }
@@ -36,4 +37,15 @@ function AuthButton() {
     }
 
     return <button onClick={() => signIn()}>Sign In</button>
+}
+
+function Home(){
+    return (
+        <Link href="/">
+            <button>
+                <h1>Home</h1>
+                <div>&#127849;</div>
+            </button>
+        </Link>
+    )
 }
