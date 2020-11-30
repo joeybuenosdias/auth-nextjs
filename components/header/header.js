@@ -22,7 +22,7 @@ function DashboardButton() {
     if(session) {
         return (
             <Link href="/dashboard">
-                <button>Dashboard</button>
+                <button className={css.btn}>Dashboard</button>
             </Link>
         )
     }
@@ -34,10 +34,10 @@ function AuthButton() {
     const [ session, loading ] = useSession()
 
     if(session) {
-        return <button onClick={() => signOut()}>Sign Out</button>
+        return <button className={css.btn} onClick={() => signOut()}>Sign Out</button>
     }
 
-    return <button onClick={() => signIn()}>Sign In</button>
+    return <button className={css.btn} onClick={() => signIn()}>Sign In</button>
 }
 
 function Home(){

@@ -7,7 +7,9 @@ export default function Dashboard() {
     return (
         <ProtectedRoute>
             <Layout>
-                I am the dashboard content
+                <h1>Dashboard</h1>
+                <p>This is a user dashboard route that can only be accessed when authenticated with a GitHub</p>
+                <p>It utilizes JSON Web Tokens for authorization and user sessions.</p>
             </Layout>
         </ProtectedRoute>
     )

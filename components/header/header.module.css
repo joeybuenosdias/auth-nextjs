@@ -15,3 +15,13 @@
     justify-content: space-around;
     width: 100%;
 }
+
+.btn {
+    padding: 16px 64px;
+    margin: 16px 0;
+    color: white;
+    background-color: black;
+    border: black;
+    border-radius: 6px;
+    font-weight: bold;
+}
