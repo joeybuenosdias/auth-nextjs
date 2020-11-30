@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSession, signIn, signOut } from 'next-auth/client'
 import css from './header.module.css';
 
@@ -42,9 +43,13 @@ function AuthButton() {
 function Home(){
     return (
         <Link href="/">
-            <button>
-                <h1>Home</h1>
-                <div>&#127849;</div>
+            <button className={css.homeButton}>
+                <h1>GitHub OAuth Demo</h1>
+                <Image
+                    width={200}
+                    height={160}
+                    src="/Octocat.png"
+                />
             </button>
         </Link>
     )
