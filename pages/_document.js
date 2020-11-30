@@ -1,11 +1,10 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Head, Main, NextScript, Html } from 'next/document';
 
 class MyDocument extends Document {
     render() {
         return (
-            <html lang="en">
+            <Html lang="en">
                 <Head>
-                    <title>GitHub OAuth Demo</title>
                     <meta name="description" content="A GitHub OAuth Demo" />
                     <meta charset="utf-8" />
                     <meta name="robots" content="noindex, nofollow" />
@@ -16,7 +15,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-            </html>
+            </Html>
         )
     }
 }
